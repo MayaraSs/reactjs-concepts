@@ -16,5 +16,7 @@
     "jest": "^25.2.6",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
-  }
+  },
+  "repository": "git@github.com:MayaraSs/reactjs-concepts.git",
+  "author": "MayaraSs <may_stein@hotmail.com>"
 }

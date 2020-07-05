@@ -1,25 +1,21 @@
-# Sobre o desafio - Criar rotas e realizar testes automatizados
+# Sobre o desafio - Nesse desafio, você deve criar uma aplicação para treinar o que você aprendeu até agora no ReactJS! 
 
-Será uma aplicação para armazenar repositórios do seu portfólio, que irá permitir a criação, listagem, atualização e remoção dos repositórios, e além disso permitir que os repositórios possam receber "likes".
+Agora você deve continuar desenvolvendo a aplicação do Nodejs-concepts que irá armazenar repositórios do seu portfólio, que você já desenvolveu o backend no último desafio utilizando o Node.js.
 
-    - Utilizei o template fornecido. Clonei o template pelo git hub.
+# Funcionalidades da aplicação
+Agora você deve completar o código para atingir os objetivos de cada funcionalidade.
 
-    - Inicializei o yarn para instalar todas as dependências.
+  * Listar os repositórios da sua API: Deve ser capaz de criar uma lista com o campo title de todos os repositórios que estão cadastrados na sua API.
 
-- Rotas da aplicação
+  * Adicionar um repositório a sua API: Deve ser capaz de adicionar um novo item na sua API através de um botão com o texto Adicionar e, após a criação, deve ser capaz de exibir o nome dele após o cadastro.
 
-  - POST /repositories: A rota deve receber title, url e techs dentro do corpo da requisição, sendo a URL o link para o github desse repositório. Ao cadastrar um novo projeto, ele deve ser armazenado dentro de um objeto no seguinte formato: { id: "uuid", title: 'Desafio Node.js', url: 'http://github.com/...', techs: ["Node.js", "..."], likes: 0 }; Certifique-se que o ID seja um UUID, e de sempre iniciar os likes como 0.
+  * Remover um repositório da sua API: Para cada item da sua lista, deve possuir um botão com o texto Remover que, ao clicar, irá chamar uma função para remover esse item da lista do seu frontend e da sua API.
 
-  - GET /repositories: Rota que lista todos os repositórios;
+# Específicação dos testes
+  * Em cada teste, tem uma breve descrição no que sua aplicação deve cumprir para que o teste passe.
 
-  - PUT /repositories/:id: A rota deve alterar apenas o title, a url e as techs do repositório que possua o id igual ao id presente nos parâmetros da rota;
+# Para esse desafio temos os seguintes testes:
 
-  - DELETE /repositories/:id: A rota deve deletar o repositório com o id presente nos parâmetros da rota;
+  * should be able to add new repository: Para que esse teste passe, sua aplicação deve permitir que um repositório seja adicionado ao seu backend e listado no seu frontend dentro de uma LI.
 
-  - POST /repositories/:id/like: A rota deve aumentar o número de likes do repositório específico escolhido através do id presente nos parâmetros da rota, a cada chamada dessa rota, o número de likes deve ser aumentado em 1;
-
-- Testes automatizados
-
-  - Para começar a utilizar os testes, execute o comando yarn test no seu terminal, e ele irá te retornar o resultado dos testes das rotas.
-
-  - Os testes já estavam escrito no template na pasta _tests_.
+  * should be able to remove repository: Para que esse teste passe, sua aplicação deve permitir que ao clicar no botão de remover que vai estar dentro da LI do repositório adicionado, o item seja removido da listagem.
